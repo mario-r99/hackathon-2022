@@ -1,0 +1,34 @@
+first account:
+0x843495f1759c29bf847e3d289841f7d51994c0d3
+
+second account:
+0xc952b91d6903afe7bf2c8e235796d351d771abc6
+pw: 5uper53cr3t
+
+
+curl --location --request POST 'http://localhost:8545' \
+--header 'Content-type: application/json' \
+--data-raw '{
+    "jsonrpc": "2.0",
+    "id": 6,
+    "method": "personal_unlockAccount",
+    "params": [
+        "0x843495f1759c29bf847e3d289841f7d51994c0d3",
+        "5uper53cr3t"
+    ]
+}'
+
+curl --location --request POST 'localhost:8545' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "jsonrpc": "2.0",
+    "id": 7,
+    "method": "eth_sendTransaction",
+    "params": [
+        {
+            "from": "0x843495f1759c29bf847e3d289841f7d51994c0d3",
+            "to": "0xc952b91d6903afe7bf2c8e235796d351d771abc6",
+            "value": "0xf4240"
+        }
+    ]
+}'
