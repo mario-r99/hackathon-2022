@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.hackathon2022.scanner.databinding.FragmentThirdBinding
 
 /**
@@ -30,6 +31,10 @@ class ThirdFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.qrValue.text = arguments?.getString("scannedID")
+        binding.buttonFirst.setOnClickListener {
+            Toast.makeText(context, "Button clicked", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onDestroyView() {

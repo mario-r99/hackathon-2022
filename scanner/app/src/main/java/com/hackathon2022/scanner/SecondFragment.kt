@@ -22,6 +22,7 @@ import com.hackathon2022.scanner.databinding.FragmentSecondBinding
 import java.io.IOException
 import android.Manifest
 import android.os.Looper
+import androidx.core.os.bundleOf
 import androidx.core.text.isDigitsOnly
 import androidx.navigation.findNavController
 
@@ -145,7 +146,8 @@ class SecondFragment : Fragment() {
                             qr_detected = true
                             activity?.runOnUiThread {
                                 cameraSource.stop()
-                                findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment)
+                                val bundle = bundleOf("scannedID" to scannedValue)
+                                findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment, bundle)
                             }
                         }
                     }
