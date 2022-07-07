@@ -35,8 +35,9 @@ class SecondFragment : Fragment() {
     private val requestCodeCameraPermission = 1001
     private lateinit var cameraSource: CameraSource
     private lateinit var barcodeDetector: BarcodeDetector
+    private lateinit var currentToast: Toast
     private var scannedValue = ""
-    private var qr_detected = false
+    private var qrDetected = false
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -53,7 +54,7 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        qr_detected = false
+        qrDetected = false
 
         val requestPermissionLauncher =
             registerForActivityResult(
@@ -140,10 +141,11 @@ class SecondFragment : Fragment() {
                 val barcodes = detections.detectedItems
                 if (barcodes.size() == 1) {
                     scannedValue = barcodes.valueAt(0).rawValue
+                    if (this@SecondFragment::currentToast.isInitialized) currentToast.cancel()
 
                     if (scannedValue.isDigitsOnly() && scannedValue.length == 6) {
-                        if (!qr_detected) {
-                            qr_detected = true
+                        if (!qrDetected) {
+                            qrDetected = true
                             activity?.runOnUiThread {
                                 cameraSource.stop()
                                 val bundle = bundleOf("scannedID" to scannedValue)
@@ -153,7 +155,8 @@ class SecondFragment : Fragment() {
                     }
                     else {
                         activity?.runOnUiThread {
-                            Toast.makeText(context, "Invalid data format", Toast.LENGTH_SHORT).show()
+                            currentToast = Toast.makeText(context, "Invalid data format", Toast.LENGTH_SHORT)
+                            currentToast.show()
                         }
                     }
                 }
