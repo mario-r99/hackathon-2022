@@ -32,3 +32,25 @@ curl --location --request POST 'localhost:8545' \
         }
     ]
 }'
+
+curl --location --request POST 'localhost:8545' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "jsonrpc": "2.0",
+    "id": 8,
+    "method": "eth_getTransactionByHash",
+    "params": [        "0x70ae86ee18091bad8454bd8f39c1ee31c49c1104f8ab1eeff988f5dd9703befd"
+    ]
+}'
+
+curl --location --request POST 'localhost:8545' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "jsonrpc": "2.0",
+    "id": 9,
+    "method": "eth_getBalance",
+    "params": [
+        "0xc952b91d6903afe7bf2c8e235796d351d771abc6",
+        "latest"
+    ]
+}'

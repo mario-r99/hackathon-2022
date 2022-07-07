@@ -3,6 +3,7 @@ import requests
 from flask import request
 import json
 from blockchainer import *
+from utils import *
 
 app = flask.Flask(__name__)
 
@@ -11,19 +12,10 @@ app = flask.Flask(__name__)
 def handle_call():
     return "Successfully Connected"
 
-#the get method. when we call this, it just return the text "Hey!! I'm the fact you got!!!"
-@app.route('/getfact', methods=['GET'])
-def get_fact():
-    return "1856-5423"
-
-@app.route('/getblocks', methods=['GET'])
-def get_blocks():
-    data = get_block()
-    return data
-
-@app.route('/getblock/<id>', methods=['GET'])
-def get_block_id(id):
-    data = get_block()
+@app.route('/getlast', methods=['GET'])
+def get_last_block():
+    config = read_config_file()
+    data = get_last_values_from_blockchain(config)
     return data
 
 #the post method. when we call this with a string containing a name, it will return the name with the text "I got your name"
@@ -31,7 +23,8 @@ def get_block_id(id):
 def extract_data():
     global data
     data = request.get_json()
-    dummy_block(id=data["id"], timestamp=data["timestamp"])
+    config = read_config_file()
+    persist_in_blockchain(config, data["id"], data["timestamp"])
     return "OK"
 
 #this commands the script to run in the given port
