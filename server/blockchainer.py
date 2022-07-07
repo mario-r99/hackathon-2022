@@ -27,7 +27,7 @@ def setup_blockchain(config):
 def persist_in_blockchain(config, station, timestamp):
     contract = setup_blockchain(config)
 
-    tx_hash = contract.functions.setFootprint(station, timestamp).transact()
+    tx_hash = contract.functions.setFootprint(timestamp, station).transact()
     print('tx_hash: {}'.format(tx_hash.hex()))
 
 def get_last_values_from_blockchain(config):
