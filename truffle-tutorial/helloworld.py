@@ -9,7 +9,7 @@ web3 = Web3(HTTPProvider(blockchain_address))
 web3.eth.defaultAccount = web3.eth.accounts[0]
 
 # Path to the compiled contract JSON file
-compiled_contract_path = '../smart-contract-configurator/build/contracts/HelloWorld.json'
+compiled_contract_path = '/build/contracts/HelloWorld.json'
 # Deployed contract address (see `migrate` command output: `contract address`)
 deployed_contract_address = '0x909f04878641F0b48A025c450762d3F6E39aE4E1'
 
