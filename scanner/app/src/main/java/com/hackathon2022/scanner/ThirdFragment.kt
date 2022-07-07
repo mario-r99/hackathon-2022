@@ -1,22 +1,21 @@
 package com.hackathon2022.scanner
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.hackathon2022.scanner.databinding.FragmentThirdBinding
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
+import java.io.OutputStreamWriter
 import java.net.HttpURLConnection
 import java.net.URL
+import java.net.URLEncoder
 import java.time.Instant
 import java.time.ZoneId
-import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 
 /**
@@ -25,6 +24,7 @@ import java.time.format.DateTimeFormatter
 class ThirdFragment : Fragment() {
 
     private var _binding: FragmentThirdBinding? = null
+    private val serverUrl = "http://172.20.36.150:5000/scanner"
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -44,6 +44,7 @@ class ThirdFragment : Fragment() {
 
         val scannedId = arguments?.getString("scannedID")
         binding.qrValue.text = scannedId
+        binding.serverAddress.setText(serverUrl)
 
         binding.buttonFirst.setOnClickListener {
             val jsonData = JSONObject()
@@ -55,10 +56,31 @@ class ThirdFragment : Fragment() {
             jsonData.put("timestamp", timestamp)
             println(jsonData)
 
-            GlobalScope.launch {
-                val jsonStr = URL("http://192.168.137.10:5000/getfact").readText()
-                println("JSON STRING: " + jsonStr)
-            }
+            Thread {
+                with(URL(serverUrl).openConnection() as HttpURLConnection) {
+                    // optional default is GET
+                    requestMethod = "POST"
+                    setRequestProperty("Content-Type", "application/json")
+
+                    val wr = OutputStreamWriter(outputStream);
+                    wr.write(jsonData.toString());
+                    wr.flush();
+
+                    println("URL : $url")
+                    println("Response Code : $responseCode")
+
+                    BufferedReader(InputStreamReader(inputStream)).use {
+                        val response = StringBuffer()
+
+                        var inputLine = it.readLine()
+                        while (inputLine != null) {
+                            response.append(inputLine)
+                            inputLine = it.readLine()
+                        }
+                        println("Response : $response")
+                    }
+                }
+            }.start()
 
             Toast.makeText(context, "Confirmation successful!", Toast.LENGTH_SHORT).show()
         }

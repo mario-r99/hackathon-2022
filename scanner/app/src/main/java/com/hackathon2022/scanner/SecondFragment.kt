@@ -37,6 +37,7 @@ class SecondFragment : Fragment() {
     private lateinit var barcodeDetector: BarcodeDetector
     private lateinit var currentToast: Toast
     private var scannedValue = ""
+    private val qrSymbols = "_-"
     private var qrDetected = false
 
     // This property is only valid between onCreateView and
@@ -143,7 +144,7 @@ class SecondFragment : Fragment() {
                     scannedValue = barcodes.valueAt(0).rawValue
                     if (this@SecondFragment::currentToast.isInitialized) currentToast.cancel()
 
-                    if (scannedValue.isDigitsOnly() && scannedValue.length == 6) {
+                    if (scannedValue.any { it in qrSymbols } && scannedValue.length > 17) {
                         if (!qrDetected) {
                             qrDetected = true
                             activity?.runOnUiThread {

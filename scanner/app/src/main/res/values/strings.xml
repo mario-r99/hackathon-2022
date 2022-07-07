@@ -10,6 +10,6 @@
     <string name="description">QR Code Scanner</string>
 
     <string name="third_fragment_label">Attendance Confirmation</string>
-    <string name="qr_title">Scanned ID</string>
+    <string name="qr_title">Scanned ID:</string>
     <string name="send">Confirm Attendance</string>
 </resources>
