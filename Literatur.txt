@@ -1,0 +1,7 @@
+Ethereum with Geth via Docker:
+https://medium.com/scb-digital/running-a-private-ethereum-blockchain-using-docker-589c8e6a4fe8
+
+Ethereum with Truffle:
+https://trufflesuite.com
+https://dev.to/gcrsaldanha/deploy-a-smart-contract-on-ethereum-with-python-truffle-and-web3py-5on
+https://www.codementor.io/@gcrsaldanha/part-2-2-persist-data-to-the-ethereum-blockchain-using-python-truffle-and-ganache-1bui1s7xyc
