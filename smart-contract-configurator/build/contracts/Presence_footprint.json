@@ -1,0 +1,1573 @@
+{
+  "contractName": "Presence_footprint",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "footprints",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "station",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "station",
+          "type": "uint256"
+        }
+      ],
+      "name": "setFootprint",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getStation",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getTimestamp",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"footprints\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"station\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getStation\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getTimestamp\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"station\",\"type\":\"uint256\"}],\"name\":\"setFootprint\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Presence_footprint.sol\":\"Presence_footprint\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Presence_footprint.sol\":{\"keccak256\":\"0xf7327339ec972850af917725e06b75beee87f1bbf038e8001844c68f3257df89\",\"urls\":[\"bzz-raw://aa06275df0d24b4f332c30b49680532d5e5114dd3243170537bc98bcc189fc15\",\"dweb:/ipfs/QmbRck9BERm43tDwMiZ3a4EE6ZistE1Q7SVHJ4CgrXiuv3\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610267806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063106e054d146100515780631092c5531461009357806336f7db28146100cb578063b633620c14610114575b600080fd5b61007d6004803603602081101561006757600080fd5b8101908080359060200190929190505050610156565b6040518082815260200191505060405180910390f35b6100c9600480360360408110156100a957600080fd5b81019080803590602001909291908035906020019092919050505061017d565b005b6100f7600480360360208110156100e157600080fd5b81019080803590602001909291905050506101da565b604051808381526020018281526020019250505060405180910390f35b6101406004803603602081101561012a57600080fd5b810190808035906020019092919050505061020b565b6040518082815260200191505060405180910390f35b600080828154811061016457fe5b9060005260206000209060020201600101549050919050565b60006040518060400160405280848152602001838152509080600181540180825580915050906001820390600052602060002090600202016000909192909190915060008201518160000155602082015181600101555050505050565b600081815481106101e757fe5b90600052602060002090600202016000915090508060000154908060010154905082565b600080828154811061021957fe5b906000526020600020906002020160000154905091905056fea265627a7a723158208f38166502a93898037879ce47cd6349f3bb558d01166d8afff68f9e1813f33064736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063106e054d146100515780631092c5531461009357806336f7db28146100cb578063b633620c14610114575b600080fd5b61007d6004803603602081101561006757600080fd5b8101908080359060200190929190505050610156565b6040518082815260200191505060405180910390f35b6100c9600480360360408110156100a957600080fd5b81019080803590602001909291908035906020019092919050505061017d565b005b6100f7600480360360208110156100e157600080fd5b81019080803590602001909291905050506101da565b604051808381526020018281526020019250505060405180910390f35b6101406004803603602081101561012a57600080fd5b810190808035906020019092919050505061020b565b6040518082815260200191505060405180910390f35b600080828154811061016457fe5b9060005260206000209060020201600101549050919050565b60006040518060400160405280848152602001838152509080600181540180825580915050906001820390600052602060002090600202016000909192909190915060008201518160000155602082015181600101555050505050565b600081815481106101e757fe5b90600052602060002090600202016000915090508060000154908060010154905082565b600080828154811061021957fe5b906000526020600020906002020160000154905091905056fea265627a7a723158208f38166502a93898037879ce47cd6349f3bb558d01166d8afff68f9e1813f33064736f6c63430005100032",
+  "sourceMap": "66:1043:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:1043:2;;;;;;;",
+  "deployedSourceMap": "66:1043:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:1043:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;619:99;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;619:99:2;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;343:270;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;343:270:2;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;176:29;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;176:29:2;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;724:103;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;724:103:2;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;619:99;664:4;688:10;699:2;688:14;;;;;;;;;;;;;;;;;;:22;;;680:31;;619:99;;;:::o;343:270::-;516:10;532:72;;;;;;;;566:9;532:72;;;;586:7;532:72;;;516:89;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;516:89:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;343:270;;:::o;176:29::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;724:103::-;771:4;795:10;806:2;795:14;;;;;;;;;;;;;;;;;;:24;;;787:33;;724:103;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract Presence_footprint {\n\n    struct footprint{\n        uint timestamp;\n        uint station;\n    }\n\n    footprint[] public footprints;\n\n    // constructor() public {\n\t\t//     footprints[0] = footprint({\n    //         timestamp:10, station: 1\n    //     });\n\t  // }\n\n    function setFootprint(uint timestamp, uint station) public {\n      // user_footprint = footprint({\n      //       timestamp:timestamp, station: station\n      //   });\n      footprints.push(footprint({\n            timestamp:timestamp, station: station\n        }));\n\n    }\n\n    function getStation(uint id) public returns (uint) {\n        return (footprints[id].station);\n    }\n\n    function getTimestamp(uint id) public returns (uint) {\n        return (footprints[id].timestamp);\n    }\n\n    // function set(uint timestamp, uint station_id) public {\n    //   last_presence_timestamp = timestamp;\n    //   last_station_id = station_id;\n    // }\n\n    // function get() public returns (uint, uint) {\n    //   return (last_presence_timestamp, last_station_id);\n    // }\n\n}\n",
+  "sourcePath": "D:\\6Projects\\16Hackathon\\1WhatTheHaeck\\hackathon-2022\\smart-contract-configurator\\contracts\\Presence_footprint.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Presence_footprint.sol",
+    "exportedSymbols": {
+      "Presence_footprint": [
+        111
+      ]
+    },
+    "id": 112,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 57,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 111,
+        "linearizedBaseContracts": [
+          111
+        ],
+        "name": "Presence_footprint",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Presence_footprint.footprint",
+            "id": 62,
+            "members": [
+              {
+                "constant": false,
+                "id": 59,
+                "name": "timestamp",
+                "nodeType": "VariableDeclaration",
+                "scope": 62,
+                "src": "127:14:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 58,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "127:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61,
+                "name": "station",
+                "nodeType": "VariableDeclaration",
+                "scope": 62,
+                "src": "151:12:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 60,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "151:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "footprint",
+            "nodeType": "StructDefinition",
+            "scope": 111,
+            "src": "101:69:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 65,
+            "name": "footprints",
+            "nodeType": "VariableDeclaration",
+            "scope": 111,
+            "src": "176:29:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_footprint_$62_storage_$dyn_storage",
+              "typeString": "struct Presence_footprint.footprint[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 63,
+                "name": "footprint",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 62,
+                "src": "176:9:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_footprint_$62_storage_ptr",
+                  "typeString": "struct Presence_footprint.footprint"
+                }
+              },
+              "id": 64,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "176:11:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_footprint_$62_storage_$dyn_storage_ptr",
+                "typeString": "struct Presence_footprint.footprint[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 81,
+              "nodeType": "Block",
+              "src": "402:211:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 76,
+                            "name": "timestamp",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 67,
+                            "src": "566:9:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "id": 77,
+                            "name": "station",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 69,
+                            "src": "586:7:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "id": 75,
+                          "name": "footprint",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 62,
+                          "src": "532:9:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_footprint_$62_storage_ptr_$",
+                            "typeString": "type(struct Presence_footprint.footprint storage pointer)"
+                          }
+                        },
+                        "id": 78,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [
+                          "timestamp",
+                          "station"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "532:72:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_footprint_$62_memory",
+                          "typeString": "struct Presence_footprint.footprint memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_footprint_$62_memory",
+                          "typeString": "struct Presence_footprint.footprint memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 72,
+                        "name": "footprints",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 65,
+                        "src": "516:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_footprint_$62_storage_$dyn_storage",
+                          "typeString": "struct Presence_footprint.footprint storage ref[] storage ref"
+                        }
+                      },
+                      "id": 74,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "516:15:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_footprint_$62_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct Presence_footprint.footprint storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 79,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "516:89:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 80,
+                  "nodeType": "ExpressionStatement",
+                  "src": "516:89:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 82,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setFootprint",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 70,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 67,
+                  "name": "timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 82,
+                  "src": "365:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 66,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "365:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 69,
+                  "name": "station",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 82,
+                  "src": "381:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 68,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "381:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "364:30:2"
+            },
+            "returnParameters": {
+              "id": 71,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "402:0:2"
+            },
+            "scope": 111,
+            "src": "343:270:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 95,
+              "nodeType": "Block",
+              "src": "670:48:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 89,
+                            "name": "footprints",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 65,
+                            "src": "688:10:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_struct$_footprint_$62_storage_$dyn_storage",
+                              "typeString": "struct Presence_footprint.footprint storage ref[] storage ref"
+                            }
+                          },
+                          "id": 91,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 90,
+                            "name": "id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 84,
+                            "src": "699:2:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "688:14:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_footprint_$62_storage",
+                            "typeString": "struct Presence_footprint.footprint storage ref"
+                          }
+                        },
+                        "id": 92,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "station",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 61,
+                        "src": "688:22:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 93,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "687:24:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 88,
+                  "id": 94,
+                  "nodeType": "Return",
+                  "src": "680:31:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 96,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getStation",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 85,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 84,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 96,
+                  "src": "639:7:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 83,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "639:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "638:9:2"
+            },
+            "returnParameters": {
+              "id": 88,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 87,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 96,
+                  "src": "664:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 86,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "664:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "663:6:2"
+            },
+            "scope": 111,
+            "src": "619:99:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 109,
+              "nodeType": "Block",
+              "src": "777:50:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 103,
+                            "name": "footprints",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 65,
+                            "src": "795:10:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_struct$_footprint_$62_storage_$dyn_storage",
+                              "typeString": "struct Presence_footprint.footprint storage ref[] storage ref"
+                            }
+                          },
+                          "id": 105,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 104,
+                            "name": "id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 98,
+                            "src": "806:2:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "795:14:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_footprint_$62_storage",
+                            "typeString": "struct Presence_footprint.footprint storage ref"
+                          }
+                        },
+                        "id": 106,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "timestamp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 59,
+                        "src": "795:24:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 107,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "794:26:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 102,
+                  "id": 108,
+                  "nodeType": "Return",
+                  "src": "787:33:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 110,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTimestamp",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 99,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 98,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 110,
+                  "src": "746:7:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 97,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "746:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "745:9:2"
+            },
+            "returnParameters": {
+              "id": 102,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 101,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 110,
+                  "src": "771:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 100,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "771:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "770:6:2"
+            },
+            "scope": 111,
+            "src": "724:103:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 112,
+        "src": "66:1043:2"
+      }
+    ],
+    "src": "32:1078:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Presence_footprint.sol",
+      "exportedSymbols": {
+        "Presence_footprint": [
+          111
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 57,
+        "name": "PragmaDirective",
+        "src": "32:32:2"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            111
+          ],
+          "name": "Presence_footprint",
+          "scope": 112
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "Presence_footprint.footprint",
+              "name": "footprint",
+              "scope": 111,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "timestamp",
+                  "scope": 62,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 58,
+                    "name": "ElementaryTypeName",
+                    "src": "127:4:2"
+                  }
+                ],
+                "id": 59,
+                "name": "VariableDeclaration",
+                "src": "127:14:2"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "station",
+                  "scope": 62,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 60,
+                    "name": "ElementaryTypeName",
+                    "src": "151:4:2"
+                  }
+                ],
+                "id": 61,
+                "name": "VariableDeclaration",
+                "src": "151:12:2"
+              }
+            ],
+            "id": 62,
+            "name": "StructDefinition",
+            "src": "101:69:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "footprints",
+              "scope": 111,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct Presence_footprint.footprint[]",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "struct Presence_footprint.footprint[]"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "footprint",
+                      "referencedDeclaration": 62,
+                      "type": "struct Presence_footprint.footprint"
+                    },
+                    "id": 63,
+                    "name": "UserDefinedTypeName",
+                    "src": "176:9:2"
+                  }
+                ],
+                "id": 64,
+                "name": "ArrayTypeName",
+                "src": "176:11:2"
+              }
+            ],
+            "id": 65,
+            "name": "VariableDeclaration",
+            "src": "176:29:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setFootprint",
+              "scope": 111,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "timestamp",
+                      "scope": 82,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 66,
+                        "name": "ElementaryTypeName",
+                        "src": "365:4:2"
+                      }
+                    ],
+                    "id": 67,
+                    "name": "VariableDeclaration",
+                    "src": "365:14:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "station",
+                      "scope": 82,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 68,
+                        "name": "ElementaryTypeName",
+                        "src": "381:4:2"
+                      }
+                    ],
+                    "id": 69,
+                    "name": "VariableDeclaration",
+                    "src": "381:12:2"
+                  }
+                ],
+                "id": 70,
+                "name": "ParameterList",
+                "src": "364:30:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 71,
+                "name": "ParameterList",
+                "src": "402:0:2"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_struct$_footprint_$62_memory",
+                                  "typeString": "struct Presence_footprint.footprint memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (struct Presence_footprint.footprint storage ref) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 65,
+                                  "type": "struct Presence_footprint.footprint storage ref[] storage ref",
+                                  "value": "footprints"
+                                },
+                                "id": 72,
+                                "name": "Identifier",
+                                "src": "516:10:2"
+                              }
+                            ],
+                            "id": 74,
+                            "name": "MemberAccess",
+                            "src": "516:15:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                "timestamp",
+                                "station"
+                              ],
+                              "type": "struct Presence_footprint.footprint memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 62,
+                                  "type": "type(struct Presence_footprint.footprint storage pointer)",
+                                  "value": "footprint"
+                                },
+                                "id": 75,
+                                "name": "Identifier",
+                                "src": "532:9:2"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 67,
+                                  "type": "uint256",
+                                  "value": "timestamp"
+                                },
+                                "id": 76,
+                                "name": "Identifier",
+                                "src": "566:9:2"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 69,
+                                  "type": "uint256",
+                                  "value": "station"
+                                },
+                                "id": 77,
+                                "name": "Identifier",
+                                "src": "586:7:2"
+                              }
+                            ],
+                            "id": 78,
+                            "name": "FunctionCall",
+                            "src": "532:72:2"
+                          }
+                        ],
+                        "id": 79,
+                        "name": "FunctionCall",
+                        "src": "516:89:2"
+                      }
+                    ],
+                    "id": 80,
+                    "name": "ExpressionStatement",
+                    "src": "516:89:2"
+                  }
+                ],
+                "id": 81,
+                "name": "Block",
+                "src": "402:211:2"
+              }
+            ],
+            "id": 82,
+            "name": "FunctionDefinition",
+            "src": "343:270:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getStation",
+              "scope": 111,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "id",
+                      "scope": 96,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 83,
+                        "name": "ElementaryTypeName",
+                        "src": "639:4:2"
+                      }
+                    ],
+                    "id": 84,
+                    "name": "VariableDeclaration",
+                    "src": "639:7:2"
+                  }
+                ],
+                "id": 85,
+                "name": "ParameterList",
+                "src": "638:9:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 96,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 86,
+                        "name": "ElementaryTypeName",
+                        "src": "664:4:2"
+                      }
+                    ],
+                    "id": 87,
+                    "name": "VariableDeclaration",
+                    "src": "664:4:2"
+                  }
+                ],
+                "id": 88,
+                "name": "ParameterList",
+                "src": "663:6:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 88
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "station",
+                              "referencedDeclaration": 61,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct Presence_footprint.footprint storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 65,
+                                      "type": "struct Presence_footprint.footprint storage ref[] storage ref",
+                                      "value": "footprints"
+                                    },
+                                    "id": 89,
+                                    "name": "Identifier",
+                                    "src": "688:10:2"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 84,
+                                      "type": "uint256",
+                                      "value": "id"
+                                    },
+                                    "id": 90,
+                                    "name": "Identifier",
+                                    "src": "699:2:2"
+                                  }
+                                ],
+                                "id": 91,
+                                "name": "IndexAccess",
+                                "src": "688:14:2"
+                              }
+                            ],
+                            "id": 92,
+                            "name": "MemberAccess",
+                            "src": "688:22:2"
+                          }
+                        ],
+                        "id": 93,
+                        "name": "TupleExpression",
+                        "src": "687:24:2"
+                      }
+                    ],
+                    "id": 94,
+                    "name": "Return",
+                    "src": "680:31:2"
+                  }
+                ],
+                "id": 95,
+                "name": "Block",
+                "src": "670:48:2"
+              }
+            ],
+            "id": 96,
+            "name": "FunctionDefinition",
+            "src": "619:99:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getTimestamp",
+              "scope": 111,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "id",
+                      "scope": 110,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 97,
+                        "name": "ElementaryTypeName",
+                        "src": "746:4:2"
+                      }
+                    ],
+                    "id": 98,
+                    "name": "VariableDeclaration",
+                    "src": "746:7:2"
+                  }
+                ],
+                "id": 99,
+                "name": "ParameterList",
+                "src": "745:9:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 110,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 100,
+                        "name": "ElementaryTypeName",
+                        "src": "771:4:2"
+                      }
+                    ],
+                    "id": 101,
+                    "name": "VariableDeclaration",
+                    "src": "771:4:2"
+                  }
+                ],
+                "id": 102,
+                "name": "ParameterList",
+                "src": "770:6:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 102
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "timestamp",
+                              "referencedDeclaration": 59,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct Presence_footprint.footprint storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 65,
+                                      "type": "struct Presence_footprint.footprint storage ref[] storage ref",
+                                      "value": "footprints"
+                                    },
+                                    "id": 103,
+                                    "name": "Identifier",
+                                    "src": "795:10:2"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 98,
+                                      "type": "uint256",
+                                      "value": "id"
+                                    },
+                                    "id": 104,
+                                    "name": "Identifier",
+                                    "src": "806:2:2"
+                                  }
+                                ],
+                                "id": 105,
+                                "name": "IndexAccess",
+                                "src": "795:14:2"
+                              }
+                            ],
+                            "id": 106,
+                            "name": "MemberAccess",
+                            "src": "795:24:2"
+                          }
+                        ],
+                        "id": 107,
+                        "name": "TupleExpression",
+                        "src": "794:26:2"
+                      }
+                    ],
+                    "id": 108,
+                    "name": "Return",
+                    "src": "787:33:2"
+                  }
+                ],
+                "id": 109,
+                "name": "Block",
+                "src": "777:50:2"
+              }
+            ],
+            "id": 110,
+            "name": "FunctionDefinition",
+            "src": "724:103:2"
+          }
+        ],
+        "id": 111,
+        "name": "ContractDefinition",
+        "src": "66:1043:2"
+      }
+    ],
+    "id": 112,
+    "name": "SourceUnit",
+    "src": "32:1078:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x3aB88f35a15c6003Ed0043f1f0b3496Ba671505b",
+      "transactionHash": "0x0480ef1b616ef1367fd4710e4aba731a2f9ff9cf3f2b2a366badf5defe925b43"
+    },
+    "5778": {
+      "events": {},
+      "links": {},
+      "address": "0xf8bC21da59F02F40104B60cE24D434275CA0bCb1",
+      "transactionHash": "0x677cc49c69e858ef8a58e55090f674e00a5f4a02d834d5acccd2dfb27cfe5d8f"
+    },
+    "5779": {
+      "events": {},
+      "links": {},
+      "address": "0x5CD50E3097CBCAb55d15f9D7730295A6B95c1051",
+      "transactionHash": "0x5082b4593a26ac9933792853d78ea3195729d944861bdb8814135b64aee15639"
+    }
+  },
+  "schemaVersion": "3.4.8",
+  "updatedAt": "2022-07-07T13:34:10.386Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
