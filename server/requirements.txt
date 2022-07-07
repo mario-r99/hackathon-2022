@@ -1,0 +1,2 @@
+flask==2.1.2
+influxdb_client==1.30.0
