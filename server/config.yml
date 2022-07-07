@@ -1,0 +1,5 @@
+blockchain_address: http://127.0.0.1:9545
+
+compiled_contract_path: build/contracts/SpiecContract.json
+
+deployed_contract_address: 0x34747169Fa0C47Fc5F99C615120cD6ccc810d2C1

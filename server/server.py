@@ -2,6 +2,7 @@ import flask
 import requests
 from flask import request
 import json
+from blockchainer import *
 
 app = flask.Flask(__name__)
 
@@ -15,14 +16,22 @@ def handle_call():
 def get_fact():
     return "1856-5423"
 
+@app.route('/getblocks', methods=['GET'])
+def get_blocks():
+    data = get_block()
+    return data
+
+@app.route('/getblock/<id>', methods=['GET'])
+def get_block_id(id):
+    data = get_block()
+    return data
+
 #the post method. when we call this with a string containing a name, it will return the name with the text "I got your name"
 @app.route('/scanner', methods=['POST'])
 def extract_data():
     global data
     data = request.get_json()
-    print(data)
-    #with open('mysite/java.json', 'w') as outfile:
-    #    json.dump(data, outfile)
+    dummy_block(id=data["id"], timestamp=data["timestamp"])
     return "OK"
 
 #this commands the script to run in the given port
