@@ -4,7 +4,7 @@ from flask import request
 import json
 from blockchainer import *
 from utils import *
-from ..visualization.push import push_data
+
 
 app = flask.Flask(__name__)
 
