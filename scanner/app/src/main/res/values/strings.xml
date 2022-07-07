@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">Proof of Presence</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">Proof of Presence</string>
-    <string name="second_fragment_label">QR Code Scanner</string>
-    <string name="next">Scan</string>
-    <string name="previous">Previous</string>
 
+    <string name="first_fragment_label">Proof of Presence</string>
+    <string name="next">Scan</string>
+
+    <string name="second_fragment_label">QR Code Scanner</string>
     <string name="title">Hackathon 2022</string>
     <string name="description">QR Code Scanner</string>
+
+    <string name="third_fragment_label">Attendance Confirmation</string>
+    <string name="qr_title">Scanned ID</string>
+    <string name="send">Confirm Attendance</string>
 </resources>

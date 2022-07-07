@@ -22,6 +22,8 @@ import com.hackathon2022.scanner.databinding.FragmentSecondBinding
 import java.io.IOException
 import android.Manifest
 import android.os.Looper
+import androidx.core.text.isDigitsOnly
+import androidx.navigation.findNavController
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -33,6 +35,7 @@ class SecondFragment : Fragment() {
     private lateinit var cameraSource: CameraSource
     private lateinit var barcodeDetector: BarcodeDetector
     private var scannedValue = ""
+    private var qr_detected = false
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -49,6 +52,7 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        qr_detected = false
 
         val requestPermissionLauncher =
             registerForActivityResult(
@@ -83,6 +87,7 @@ class SecondFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        if (this::cameraSource.isInitialized) cameraSource.stop()
         _binding = null
     }
 
@@ -135,9 +140,19 @@ class SecondFragment : Fragment() {
                 if (barcodes.size() == 1) {
                     scannedValue = barcodes.valueAt(0).rawValue
 
-                    activity?.runOnUiThread {
-                        cameraSource.stop()
-                        Toast.makeText(activity, "value- $scannedValue", Toast.LENGTH_SHORT).show()
+                    if (scannedValue.isDigitsOnly() && scannedValue.length == 6) {
+                        if (!qr_detected) {
+                            qr_detected = true
+                            activity?.runOnUiThread {
+                                cameraSource.stop()
+                                findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment)
+                            }
+                        }
+                    }
+                    else {
+                        activity?.runOnUiThread {
+                            Toast.makeText(context, "Invalid data format", Toast.LENGTH_SHORT).show()
+                        }
                     }
                 }
             }
