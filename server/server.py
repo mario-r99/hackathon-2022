@@ -29,11 +29,11 @@ def extract_data():
     ## Writing data
     data = request.get_json()
     config = read_config_file()
-    persist_in_blockchain(config, data["id"], data["timestamp"])
+    persist_in_blockchain(config, data["id"], data["timestamp"], data["location"])
 
     ## Reading data
-    station, timestamp = get_last_values_from_blockchain(config)
-    data = "{\"id\":\"" + str(station)+"\",\"timestamp\":\"" + str(timestamp) + "\"}"
+    station, timestamp, location = get_last_values_from_blockchain(config)
+    data = "{\"id\":\"" + str(station)+"\",\"timestamp\":\"" + str(timestamp) + "\",\"location\":\"" + str(location) + "\"}"
     push_data(data)
 
     return "OK"

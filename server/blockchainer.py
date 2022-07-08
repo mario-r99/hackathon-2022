@@ -24,10 +24,10 @@ def setup_blockchain(config):
     contract = web3.eth.contract(address=deployed_contract_address, abi=contract_abi)
     return contract
 
-def persist_in_blockchain(config, station, timestamp):
+def persist_in_blockchain(config, station, timestamp, location):
     contract = setup_blockchain(config)
 
-    tx_hash = contract.functions.setFootprint(timestamp, station).transact()
+    tx_hash = contract.functions.setFootprint(timestamp, station, location).transact()
     print('tx_hash: {}'.format(tx_hash.hex()))
 
 def get_last_values_from_blockchain(config):
@@ -38,8 +38,10 @@ def get_last_values_from_blockchain(config):
     print("Last station: ",station)
     timestamp = contract.functions.getLastTimestamp().call()
     print("Last timestamp: ",timestamp)
+    location = contract.functions.getLastLocation().call()
+    print("Last location: ",location)
 
-    return station, timestamp
+    return station, timestamp, location
 
 # if __name__ == "__main__":
 

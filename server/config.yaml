@@ -1,3 +1,3 @@
 blockchain_address: 'http://127.0.0.1:7500'
-deployed_contract_address: '0x554D5fb9aB6019Eb06E58FdC02e36c58683014C1'
+deployed_contract_address: '0xb6Ad595C39Da74e003E335b6a8E5E2cf23e4c451'
 compiled_contract_path: '../smart-contract-configurator/build/contracts/Presence_footprint.json'
