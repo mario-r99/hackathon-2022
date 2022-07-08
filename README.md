@@ -38,3 +38,7 @@
 3. Install Truffle: `npm install truffle`
 4. To connect Truffle smart-contract building with Granache Blockchain use the truffle-config.js file.
 5. Build contracts: `truffle migrate`
+
+### Dashboard
+- InfluxDB runs currently on AWS Cloud
+- Can also be hosted on any device, just URL and token has to be updated
