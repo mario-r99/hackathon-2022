@@ -37,4 +37,4 @@
 2. Install [NodeJS](https://nodejs.org/en/) for node package manager (npm)
 3. Install Truffle: `npm install truffle`
 4. To connect Truffle smart-contract building with Granache Blockchain use the truffle-config.js file.
-5. Build contracts: `npm install truffle`
+5. Build contracts: `truffle migrate`
