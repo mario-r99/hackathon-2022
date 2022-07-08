@@ -31,7 +31,7 @@ import java.time.format.DateTimeFormatter
 class ThirdFragment : Fragment() {
 
     private var _binding: FragmentThirdBinding? = null
-    private val serverUrl = "http://172.20.36.211:5000/scanner"
+    private val serverUrl = "http://172.20.36.150:5000/scanner"
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private var latitude = 48.748654568574594
     private var longitude = 9.108372534029133
